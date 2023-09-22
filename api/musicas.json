@@ -1,0 +1,20 @@
+[
+    
+    
+    {
+        "id": 3,
+        "usuario": "raiza",
+        "titulo": "putariazinha",
+        "artista": "Mc Pipoquinha",
+        "url": "http://SEU_IP_AQUI/api/reproduzir/3",
+        "local": "static/musicas/029_audio.mp3"
+    },
+    {
+        "id": 4,
+        "usuario": "igor",
+        "titulo": "Erro Gostoso (Ao Vivo)",
+        "artista": "Simone Mendes",
+        "url": "http://SEU_IP_AQUI/api/reproduzir/4",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    }
+]

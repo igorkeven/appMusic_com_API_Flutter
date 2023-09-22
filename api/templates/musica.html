@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproduzir Áudio</title>
+</head>
+<body>
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+      
+        {{ messages[0] }}
+      
+      
+    {% endif %}
+  
+    <h1>Adicionar Novo Arquivo</h1>
+    <form action="/salvar_nova_musica" method="POST" enctype="multipart/form-data">
+        <label for="musica">Música:</label>
+        <input type="file" id="musica" name="musica" accept="audio/*" required><br><br>
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" ><br><br>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" ><br><br>
+        <label for="artista">Artista:</label>
+        <input type="text" id="artista" name="artista" ><br><br>
+        <label for="genero">Gênero</label>
+        <input type="text" name="genero" id="genero"><br><br>
+        <input type="submit" value="Adicionar Arquivo">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.0/jsmediatags.min.js"></script>
+        <script>
+            document.getElementById('musica').addEventListener('change', function() {
+                var file = this.files[0];
+                jsmediatags.read(file, {
+                    onSuccess: function(tag) {
+                        var tags = tag.tags;
+                        document.getElementById('titulo').value = tags.title;
+                        document.getElementById('artista').value = tags.artist;
+                        document.getElementById('genero').value = tags.genre;
+                        // preencha outros campos conforme necessário
+            
+                        if (tags.picture) {
+                            // converte a imagem da capa do álbum para uma URL de objeto de blob
+                            var base64String = "";
+                            for (var i = 0; i < tags.picture.data.length; i++) {
+                                base64String += String.fromCharCode(tags.picture.data[i]);
+                            }
+                            var imageUrl = "data:" + tags.picture.format + ";base64," + window.btoa(base64String);
+                            var img = document.createElement('img');
+                            img.src = imageUrl;
+                            // adicione a imagem ao corpo do documento ou aonde você quiser
+                            document.body.appendChild(img);
+                        }
+                    },
+                    onError: function(error) {
+                        console.log('Error reading tags: ', error);
+                    }
+                });
+            });
+            </script>
+            
+
+
+
+
+
+</body>
+</html>
