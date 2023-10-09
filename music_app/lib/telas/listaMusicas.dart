@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
@@ -37,24 +39,24 @@ class _ListaDeMusicasState extends State<ListaDeMusicas> {
     super.dispose();
   }
 
-// FUNÇÃO PARA DAR PLAY E PAUSE NA LISTA DE MUSICA
+
   void togglePlayPause(bool musicUrl, String musicaLocal, int index) {
     if (musicUrl) {
       // Se a música já estiver tocando, pause
       if (isPlaying) {
-        print('pause da lista');
+       
         PlayerControlador.instance.pauseMusic();
         isPlaying = false;
       } else {
         // Se a música estiver pausada, retome a reprodução
         PlayerControlador.instance.playMusic();
-        print('play da lista');
+        
         isPlaying = true;
       }
     } else {
       // Se a música for diferente da que está tocando, inicie a nova música
       PlayerControlador.instance.playNovaMusica(musicaLocal, index);
-      print('play de outra musica');
+      
     }
   }
 
@@ -67,7 +69,7 @@ class _ListaDeMusicasState extends State<ListaDeMusicas> {
         children: [
           UserAccountsDrawerHeader(
             accountName: Text('Lista de Músicas do $nome'),
-            currentAccountPicture: CircleAvatar(
+            currentAccountPicture: const CircleAvatar(
               backgroundImage: AssetImage('assets/imagens/musicDefault.jpg'),
             ),
             accountEmail: null,
@@ -104,7 +106,7 @@ class _ListaDeMusicasState extends State<ListaDeMusicas> {
                     ),
                     subtitle: Text(musicas[index]['artista']),
 
-                    // Adicione outras informações da música aqui
+                   
                   );
                 },
               ),

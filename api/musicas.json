@@ -2,19 +2,97 @@
     
     
     {
-        "id": 3,
-        "usuario": "raiza",
-        "titulo": "putariazinha",
+        "id": 1,
+        "usuario": "igor",
+        "titulo": "in the end",
         "artista": "Mc Pipoquinha",
-        "url": "http://SEU_IP_AQUI/api/reproduzir/3",
-        "local": "static/musicas/029_audio.mp3"
+        "genero": "rock",
+        "url": "http://seuIP/api/reproduzir/1",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    },
+    {
+        "id": 2,
+        "usuario": "igor",
+        "titulo": "lock strick",
+        "artista": "Mc Pipoquinha",
+        "genero": "rock",
+        "url": "http://seuIP/api/reproduzir/2",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    },
+    {
+        "id": 3,
+        "usuario": "igor",
+        "titulo": "in not is",
+        "artista": "Mc Pipoquinha",
+        "genero": "rock",
+        "url": "http://seuIP/api/reproduzir/3",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
     },
     {
         "id": 4,
         "usuario": "igor",
         "titulo": "Erro Gostoso (Ao Vivo)",
-        "artista": "Simone Mendes",
-        "url": "http://SEU_IP_AQUI/api/reproduzir/4",
+        "artista": "Simone",
+        "genero": "forro",
+        "url": "http://seuIP/api/reproduzir/4",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    },
+    {
+        "id": 5,
+        "usuario": "igor",
+        "titulo": "Erro",
+        "artista": "Simone",
+        "genero": "sertanejo",
+        "url": "http://seuIP/api/reproduzir/5",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    },
+    {
+        "id": 6,
+        "usuario": "igor",
+        "titulo": "Gostoso",
+        "artista": "Mendes",
+        "genero": "sertanejo",
+        "url": "http://seuIP/api/reproduzir/6",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    }
+    ,
+    {
+        "id": 7,
+        "usuario": "raiza",
+        "titulo": "teste",
+        "artista": "bla bla",
+        "genero": "funk",
+        "url": "http://seuIP/api/reproduzir/6",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    }
+    ,
+    {
+        "id": 8,
+        "usuario": "pedro",
+        "titulo": "Gostosinho",
+        "artista": "Mendes",
+        "genero": "funk",
+        "url": "http://seuIP/api/reproduzir/6",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    }
+    ,
+    {
+        "id": 9,
+        "usuario": "igor",
+        "titulo": "Gostoso",
+        "artista": "Mendes",
+        "genero": "sertanejo",
+        "url": "http://seuIP/api/reproduzir/6",
+        "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
+    }
+    ,
+    {
+        "id": 10,
+        "usuario": "raiza",
+        "titulo": "Gostoso",
+        "artista": "bla bla",
+        "genero": "funk",
+        "url": "http://seuIP/api/reproduzir/6",
         "local": "static/musicas/Erro Gostoso (Ao Vivo).mp3"
     }
 ]
